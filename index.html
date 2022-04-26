@@ -26,9 +26,13 @@
         </div>
       </div>
     </header>
-    <script src="./asset/particles.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script  src="./asset/particles.min.js"></script>
   <script>
     // animation 
+    // animation content 
+
+
     particlesJS("particles-js", {
       particles: {
         number: {
@@ -45,7 +49,7 @@
           type: "circle",
           stroke: {
             width: 0,
-            color: "##5f6368",
+            color: "#5f6368",
           },
           polygon: {
             nb_sides: 5,
@@ -102,8 +106,8 @@
         detect_on: "canvas",
         events: {
           onhover: {
-            enable: false,
-            mode: "grab",
+            enable: true,
+            mode: "repulse",
           },
           onclick: {
             enable: false,
@@ -126,7 +130,7 @@
             speed: 3,
           },
           repulse: {
-            distance: 200,
+            distance: 80,
             duration: 0.4,
           },
           push: {
@@ -249,6 +253,13 @@
       },
       retina_detect: true,
     });
+    let textCs = document.getElementsByClassName('contents_content') ;
+    let tl = gsap.timeline({delay: 0.2});
+    tl.from(textCs[0], { duration: 2 , WebkitFilter:"blur(10px)" ,filter:"blur(0px)", ease: "power1.in" })
+    tl.from(textCs[1], { duration: 2 , WebkitFilter:"blur(10px)" ,filter:"blur(0px)", ease: "power1.in" })
+    tl.from(textCs[2], { duration: 2 , WebkitFilter:"blur(10px)" ,filter:"blur(0px)", ease: "power1.in" })
+
+
     // background noise 
     const noise = () => {
   let canvas, ctx;
