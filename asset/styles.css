@@ -1,0 +1,59 @@
+*{
+    font-family: 'EB Garamond', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* header  */
+header >  .container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #cccc;
+    position: relative;
+}
+
+header > .container > .container__contents{
+    position: absolute;
+    bottom: 10vh;
+    left: 8vh;
+}
+.container__contents {
+    font-size: xxx-large;
+    line-height: 8vh;
+}
+.contents_content:nth-child(2){
+    margin-left: 3vw;
+
+
+}
+/* annimation background header  */
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+  
+    /* ---- particles.js container ---- */
+  
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #cccc;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+    /* background noise  */
+    .noise {
+        z-index: 100;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        opacity: .05;
+      }
+      

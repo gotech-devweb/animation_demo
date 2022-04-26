@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./asset/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="particles-js"></div>
+        <canvas id="noise" class="noise"></canvas>
+        <div class="container__contents">
+          <div class="contents_content">Business Consulting</div>
+          <div class="contents_content">System Development</div>
+          <div class="contents_content">Web Advertisement</div>
+        </div>
+      </div>
+    </header>
+    <script src="./asset/particles.min.js"></script>
+  <script>
+    // animation 
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 150,
+          density: {
+            enable: true,
+            value_area: 800,
+          },
+        },
+        color: {
+          value: "#000000",
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "##5f6368",
+          },
+          polygon: {
+            nb_sides: 5,
+          },
+          image: {
+            src: "img/github.svg",
+            width: 100,
+            height: 100,
+          },
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: {
+            enable: false,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false,
+          },
+        },
+        size: {
+          value: 4,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 40,
+            size_min: 0.1,
+            sync: false,
+          },
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#5f6368",
+          opacity: 0.2,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 1.5,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200,
+          },
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: false,
+            mode: "grab",
+          },
+          onclick: {
+            enable: true,
+            mode: "push",
+          },
+          resize: true,
+        },
+        modes: {
+          grab: {
+            distance: 140,
+            line_linked: {
+              opacity: 1,
+            },
+          },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+          },
+          push: {
+            particles_nb: 4,
+          },
+          remove: {
+            particles_nb: 2,
+          },
+        },
+      },
+      retina_detect: true,
+    });
+    // background noise 
+    const noise = () => {
+  let canvas, ctx;
+  let wWidth, wHeight;
+  let noiseData = [];
+  let frame = 0;
+  let loopTimeout;
+
+  // Create Noise
+  const createNoise = () => {
+      const idata = ctx.createImageData(wWidth, wHeight);
+      const buffer32 = new Uint32Array(idata.data.buffer);
+      const len = buffer32.length;
+      for (let i = 0; i < len; i++) {
+          if (Math.random() < 0.5) {
+              buffer32[i] = 0xff000000;
+          }
+      }
+      noiseData.push(idata);
+  };
+
+  // Play Noise
+  const paintNoise = () => {
+      if (frame === 9) {
+          frame = 0;
+      } else {
+          frame++;
+      }
+      ctx.putImageData(noiseData[frame], 0, 0);
+  };
+
+  // Loop
+  const loop = () => {
+      paintNoise(frame);
+      loopTimeout = window.setTimeout(() => {
+          window.requestAnimationFrame(loop);
+      }, (1000 / 25));
+  };
+
+  // Setup
+  const setup = () => {
+      wWidth = window.innerWidth;
+      wHeight = window.innerHeight;
+      canvas.width = wWidth;
+      canvas.height = wHeight;
+      for (let i = 0; i < 10; i++) {
+          createNoise();
+      }
+      loop();
+  };
+
+  // Reset
+  let resizeThrottle;
+  const reset = () => {
+      window.addEventListener('resize', () => {
+          window.clearTimeout(resizeThrottle);
+          resizeThrottle = window.setTimeout(() => {
+              window.clearTimeout(loopTimeout);
+              setup();
+          }, 200);
+      }, false);
+  };
+
+  // Init
+  const init = (() => {
+      canvas = document.getElementById('noise');
+      ctx = canvas.getContext('2d');
+      setup();
+  })();
+};
+noise();
+  </script>
+  </body>
+</html>
