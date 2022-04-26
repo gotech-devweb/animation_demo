@@ -254,10 +254,10 @@
       retina_detect: true,
     });
     let textCs = document.getElementsByClassName('contents_content') ;
-    let tl = gsap.timeline({delay: 0.2});
-    tl.from(textCs[0], { duration: 2 , WebkitFilter:"blur(10px)" ,filter:"blur(0px)", ease: "power1.in" })
-    tl.from(textCs[1], { duration: 2 , WebkitFilter:"blur(10px)" ,filter:"blur(0px)", ease: "power1.in" })
-    tl.from(textCs[2], { duration: 2 , WebkitFilter:"blur(10px)" ,filter:"blur(0px)", ease: "power1.in" })
+    let tl = gsap.timeline({delay: 0.1});
+    tl.from(textCs[0], { duration: 1 , WebkitFilter:"blur(10px)" ,filter:"blur(0px)", ease: "power1.in" })
+    tl.from(textCs[1], { duration: 1 , WebkitFilter:"blur(10px)" ,filter:"blur(0px)", ease: "power1.in" })
+    tl.from(textCs[2], { duration: 1 , WebkitFilter:"blur(10px)" ,filter:"blur(0px)", ease: "power1.in" })
 
 
     // background noise 
