@@ -16,7 +16,12 @@
   <body>
     <header>
       <div class="container">
+        <div id="particles-js-img1"></div>
         <div id="particles-js-under"></div>
+        <div id="particles-js-img2"></div>
+        <div id="particles-js-img3"></div>
+        <div id="particles-js-img4"></div>
+        <div id="particles-js-img5"></div>
         <div id="particles-js"></div>
         <canvas id="noise" class="noise"></canvas>
         <div class="container__contents">
@@ -26,311 +31,932 @@
         </div>
       </div>
     </header>
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script  src="./asset/particles.min.js"></script>
-  <script>
-    // animation 
-    // animation content 
-
-
-    particlesJS("particles-js", {
-      particles: {
-        number: {
-          value: 150,
-          density: {
-            enable: true,
-            value_area: 800,
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> -->
+    <!-- <script src="https://kotanukikyoso.github.io/particles.jsWithRotateAndImageOpacity/particles.min.js"></script> -->
+    <script src="./asset/particles.min.js"></script>
+    <script>
+      // animation
+      // animation content
+      let parImg = {
+        opacity : 0.9,
+       size1: 70,
+       size2: 100,
+       size3: 140,
+       size4: 200,
+       size5: 280,
+       spRotate: -0.8
+      }
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 150,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
           },
-        },
-        color: {
-          value: ["#000000","#c23616","#000000","#000000"],
-        },
-        shape: {
-          type: "circle",
-          stroke: {
-            width: 0,
+          color: {
+            value: ["#000000", "#c23616", "#000000", "#000000"],
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#5f6368",
+            },
+            polygon: {
+              nb_sides: 5,
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: 0.7,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.5,
+              sync: false,
+            },
+          },
+          size: {
+            value: 6,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 0.2,
+              size_min: 0.5,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
             color: "#5f6368",
+            opacity: 0.4,
+            width: 1,
           },
-          polygon: {
-            nb_sides: 5,
-          },
-          image: {
-            src: "img/github.svg",
-            width: 100,
-            height: 100,
-          },
-        },
-        opacity: {
-          value: 0.5,
-          random: false,
-          anim: {
-            enable: false,
-            speed: 1,
-            opacity_min: 0.5,
-            sync: false,
-          },
-        },
-        size: {
-          value: 6,
-          random: true,
-          anim: {
+          move: {
             enable: true,
-            speed: 0.2,
-            size_min: 0.5,
-            sync: false,
-          },
-        },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#5f6368",
-          opacity: 0.3,
-          width: 1,
-        },
-        move: {
-          enable: true,
-          speed: 2.5,
-          direction: "none",
-          random: false,
-          straight: false,
-          out_mode: "out",
-          bounce: false,
-          attract: {
-            enable: false,
-            rotateX: 600,
-            rotateY: 1200,
-          },
-        },
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: {
-            enable: true,
-            mode: "repulse",
-          },
-          onclick: {
-            enable: false,
-            mode: "push",
-          },
-          resize: true,
-        },
-        modes: {
-          grab: {
-            distance: 140,
-            line_linked: {
-              opacity: 1,
+            speed: 2.5,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
             },
           },
-          bubble: {
-            distance: 400,
-            size: 40,
-            duration: 2,
-            opacity: 8,
-            speed: 3,
-          },
-          repulse: {
-            distance: 80,
-            duration: 0.4,
-          },
-          push: {
-            particles_nb: 4,
-          },
-          remove: {
-            particles_nb: 2,
-          },
         },
-      },
-      retina_detect: true,
-    });
-    particlesJS("particles-js-under", {
-      particles: {
-        number: {
-          value: 100,
-          density: {
-            enable: true,
-            value_area: 800,
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "repulse",
+            },
+            onclick: {
+              enable: false,
+              mode: "push",
+            },
+            resize: true,
           },
-        },
-        color: {
-          value: ["#000000"],
-        },
-        shape: {
-          type: "circle",
-          stroke: {
-            width: 0,
-            color: "##5f6368",
-          },
-          polygon: {
-            nb_sides: 5,
-          },
-          image: {
-            src: "img/github.svg",
-            width: 100,
-            height: 100,
-          },
-        },
-        opacity: {
-          value: 0.4,
-          random: false,
-          anim: {
-            enable: false,
-            speed: 1,
-            opacity_min: 0.1,
-            sync: false,
-          },
-        },
-        size: {
-          value: 5,
-          random: true,
-          anim: {
-            enable: true,
-            speed: 1,
-            size_min: 0.1,
-            sync: false,
-          },
-        },
-        line_linked: {
-          enable: false,
-          distance: 150,
-          color: "#5f6368",
-          opacity: 0.2,
-          width: 1,
-        },
-        move: {
-          enable: true,
-          speed: 1.5,
-          direction: "none",
-          random: false,
-          straight: false,
-          out_mode: "out",
-          bounce: false,
-          attract: {
-            enable: false,
-            rotateX: 600,
-            rotateY: 1200,
-          },
-        },
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: {
-            enable: false ,
-            mode: "grab",
-          },
-          onclick: {
-            enable: false,
-            mode: "push",
-          },
-          resize: true,
-        },
-        modes: {
-          grab: {
-            distance: 140,
-            line_linked: {
-              opacity: 1,
+          modes: {
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: {
+              distance: 80,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
             },
           },
-          bubble: {
-            distance: 400,
-            size: 40,
-            duration: 2,
-            opacity: 8,
-            speed: 3,
+        },
+        retina_detect: true,
+      });
+      particlesJS("particles-js-under", {
+        particles: {
+          number: {
+            value: 100,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
           },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
+          color: {
+            value: ["#000000"],
           },
-          push: {
-            particles_nb: 4,
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "##5f6368",
+            },
+            polygon: {
+              nb_sides: 5,
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100,
+            },
           },
-          remove: {
-            particles_nb: 2,
+          opacity: {
+            value: 0.6,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 5,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 1,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: false,
+            distance: 150,
+            color: "#5f6368",
+            opacity: 0.2,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 1.5,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
           },
         },
-      },
-      retina_detect: true,
-    });
-    let textCs = document.getElementsByClassName('contents_content') ;
-    let tl = gsap.timeline({delay: 0.1});
-    tl.from(textCs[0], { duration: 1 , WebkitFilter:"blur(10px)" ,filter:"blur(0px)", ease: "power1.in" })
-    tl.from(textCs[1], { duration: 1 , WebkitFilter:"blur(10px)" ,filter:"blur(0px)", ease: "power1.in" })
-    tl.from(textCs[2], { duration: 1 , WebkitFilter:"blur(10px)" ,filter:"blur(0px)", ease: "power1.in" })
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: false,
+              mode: "grab",
+            },
+            onclick: {
+              enable: false,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+      // animation ball
+      particlesJS("particles-js-img1", {
+        particles: {
+          number: {
+            value: 1,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: ["#000000"],
+          },
+          shape: {
+            type: "image",
+            stroke: {
+              width: 0,
+              color: "##5f6368",
+            },
+            polygon: {
+              nb_sides: 5,
+            },
+            image: {
+              src: "./11zon_cropped.png",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: parImg.opacity,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: parImg.size1,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: false,
+            distance: 150,
+            color: "#5f6368",
+            opacity: 0.2,
+            width: 1,
+          },
+          rotate: {
+            value: -45,
+            random: true,
+            anim: {
+              enable: true,
+              speed: parImg.spRotate ,
+            },
+          },
+          move: {
+            enable: true,
+            speed: 1.5,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "bounce",
+            bounce: true,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: false,
+              mode: "grab",
+            },
+            onclick: {
+              enable: false,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+      particlesJS("particles-js-img2", {
+        particles: {
+          number: {
+            value: 1,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: ["#000000"],
+          },
+          shape: {
+            type: "image",
+            stroke: {
+              width: 0,
+              color: "##5f6368",
+            },
+            polygon: {
+              nb_sides: 5,
+            },
+            image: {
+              src: "./11zon_cropped (1).png",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: parImg.opacity,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          rotate: {
+            value: -45,
+            random: true,
+            anim: {
+              enable: true,
+              speed: parImg.spRotate,
+            },
+          },
+          size: {
+            value: parImg.size2,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: false,
+            distance: 150,
+            color: "#5f6368",
+            opacity: 0.2,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 1.5,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "bounce",
+            bounce: true,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: false,
+              mode: "grab",
+            },
+            onclick: {
+              enable: false,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+      particlesJS("particles-js-img3", {
+        particles: {
+          number: {
+            value: 1,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: ["#000000"],
+          },
+          shape: {
+            type: "image",
+            stroke: {
+              width: 0,
+              color: "##5f6368",
+            },
+            polygon: {
+              nb_sides: 5,
+            },
+            image: {
+              src: "./11zon_cropped (2).png",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: parImg.opacity,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          rotate: {
+            value: -45,
+            random: true,
+            anim: {
+              enable: true,
+              speed: parImg.spRotate,
+            },
+          },
+          size: {
+            value: parImg.size3,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: false,
+            distance: 150,
+            color: "#5f6368",
+            opacity: 0.1,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 1.5,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "bounce",
+            bounce: true,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: false,
+              mode: "grab",
+            },
+            onclick: {
+              enable: false,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+      particlesJS("particles-js-img4", {
+        particles: {
+          number: {
+            value: 1,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: ["#000000"],
+          },
+          shape: {
+            type: "image",
+            stroke: {
+              width: 0,
+              color: "##5f6368",
+            },
+            polygon: {
+              nb_sides: 5,
+            },
+            image: {
+              src: "./11zon_cropped (3).png",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: parImg.opacity,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          rotate: {
+            value: -45,
+            random: true,
+            anim: {
+              enable: true,
+              speed: parImg.spRotate,
+            },
+          },
+          size: {
+            value: parImg.size4,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: false,
+            distance: 150,
+            color: "#5f6368",
+            opacity: 0.1,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 1.5,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "bounce",
+            bounce: true,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: false,
+              mode: "grab",
+            },
+            onclick: {
+              enable: false,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+      particlesJS("particles-js-img5", {
+        particles: {
+          number: {
+            value: 1,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: ["#000000"],
+          },
+          shape: {
+            type: "image",
+            stroke: {
+              width: 0,
+              color: "##5f6368",
+            },
+            polygon: {
+              nb_sides: 5,
+            },
+            image: {
+              src: "./11zon_cropped (4).png",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: parImg.opacity,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          rotate: {
+            value: -45,
+            random: true,
+            anim: {
+              enable: true,
+              speed: parImg.spRotate,
+            },
+          },
+          size: {
+            value: parImg.size5,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: false,
+            distance: 150,
+            color: "#5f6368",
+            opacity: 0.1,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 1.5,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "bounce",
+            bounce: true,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: false,
+              mode: "grab",
+            },
+            onclick: {
+              enable: false,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+      
+      // let imgCVs = document.querySelectorAll('div > canvas')
+      // imgCVs[3].rotate(20 * Math.PI / 180);
+      let textCs = document.getElementsByClassName("contents_content");
+      let tl = gsap.timeline({ delay: 0.1 });
+      tl.from(textCs[0], {
+        duration: 1,
+        WebkitFilter: "blur(10px)",
+        filter: "blur(10px)",
+        ease: "power1.in",
+      });
+      tl.from(textCs[1], {
+        duration: 1,
+        WebkitFilter: "blur(10px)",
+        filter: "blur(10px)",
+        ease: "power1.in",
+      });
+      tl.from(textCs[2], {
+        duration: 1,
+        WebkitFilter: "blur(10px)",
+        filter: "blur(10px)",
+        ease: "power1.in",
+      });
 
+      // background noise
+      const noise = () => {
+        let canvas, ctx;
+        let wWidth, wHeight;
+        let noiseData = [];
+        let frame = 0;
+        let loopTimeout;
 
-    // background noise 
-    const noise = () => {
-  let canvas, ctx;
-  let wWidth, wHeight;
-  let noiseData = [];
-  let frame = 0;
-  let loopTimeout;
-
-  // Create Noise
-  const createNoise = () => {
-      const idata = ctx.createImageData(wWidth, wHeight);
-      const buffer32 = new Uint32Array(idata.data.buffer);
-      const len = buffer32.length;
-      for (let i = 0; i < len; i++) {
-          if (Math.random() < 0.5) {
+        // Create Noise
+        const createNoise = () => {
+          const idata = ctx.createImageData(wWidth, wHeight);
+          const buffer32 = new Uint32Array(idata.data.buffer);
+          const len = buffer32.length;
+          for (let i = 0; i < len; i++) {
+            if (Math.random() < 0.5) {
               buffer32[i] = 0xff000000;
+            }
           }
-      }
-      noiseData.push(idata);
-  };
+          noiseData.push(idata);
+        };
 
-  // Play Noise
-  const paintNoise = () => {
-      if (frame === 9) {
-          frame = 0;
-      } else {
-          frame++;
-      }
-      ctx.putImageData(noiseData[frame], 0, 0);
-  };
+        // Play Noise
+        const paintNoise = () => {
+          if (frame === 9) {
+            frame = 0;
+          } else {
+            frame++;
+          }
+          ctx.putImageData(noiseData[frame], 0, 0);
+        };
 
-  // Loop
-  const loop = () => {
-      paintNoise(frame);
-      loopTimeout = window.setTimeout(() => {
-          window.requestAnimationFrame(loop);
-      }, (1000 / 25));
-  };
+        // Loop
+        const loop = () => {
+          paintNoise(frame);
+          loopTimeout = window.setTimeout(() => {
+            window.requestAnimationFrame(loop);
+          }, 1000 / 25);
+        };
 
-  // Setup
-  const setup = () => {
-      wWidth = window.innerWidth;
-      wHeight = window.innerHeight;
-      canvas.width = wWidth;
-      canvas.height = wHeight;
-      for (let i = 0; i < 10; i++) {
-          createNoise();
-      }
-      loop();
-  };
+        // Setup
+        const setup = () => {
+          wWidth = window.innerWidth;
+          wHeight = window.innerHeight;
+          canvas.width = wWidth;
+          canvas.height = wHeight;
+          for (let i = 0; i < 10; i++) {
+            createNoise();
+          }
+          loop();
+        };
 
-  // Reset
-  let resizeThrottle;
-  const reset = () => {
-      window.addEventListener('resize', () => {
-          window.clearTimeout(resizeThrottle);
-          resizeThrottle = window.setTimeout(() => {
-              window.clearTimeout(loopTimeout);
-              setup();
-          }, 200);
-      }, false);
-  };
+        // Reset
+        let resizeThrottle;
+        const reset = () => {
+          window.addEventListener(
+            "resize",
+            () => {
+              window.clearTimeout(resizeThrottle);
+              resizeThrottle = window.setTimeout(() => {
+                window.clearTimeout(loopTimeout);
+                setup();
+              }, 200);
+            },
+            false
+          );
+        };
 
-  // Init
-  const init = (() => {
-      canvas = document.getElementById('noise');
-      ctx = canvas.getContext('2d');
-      setup();
-  })();
-};
-noise();
-  </script>
+        // Init
+        const init = (() => {
+          canvas = document.getElementById("noise");
+          ctx = canvas.getContext("2d");
+          setup();
+        })();
+      };
+      noise();
+    </script>
   </body>
 </html>

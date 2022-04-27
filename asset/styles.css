@@ -49,11 +49,23 @@ canvas {
     bottom: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(224, 223, 223, 0.8);
+ 
+}
+#particles-js-img5 ,
+#particles-js-img4 ,
+#particles-js-img3 ,
+#particles-js-img2 ,
+#particles-js-img1 {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgba(224, 223, 223, 0.8);
     background-image: url("");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 50% 50%; */
 }
     /* background noise  */
     .noise {
