@@ -10,6 +10,10 @@ header >  .container{
     height: 100vh;
     background-color: #cccc;
     position: relative;
+   
+}
+header{
+    overflow: hidden;
 }
 
 header > .container > .container__contents{
@@ -35,33 +39,104 @@ canvas {
   
     /* ---- particles.js container ---- */
   
-#particles-js {
+#particles-js1 {
     position: absolute;
-    top:0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
+    top:2vh;
+    bottom: 10vh;   
+    width: 50vw;
+    left: -6vw;
+    height: 50vh;
+    transform: rotate(24deg);
+   
+}
+#particles-js2 {
+    position: absolute;
+    top:18vh;
+    /* bottom: 10vh;    */
+    width: 50vw;
+    right:  -4vw;
+    height: 50vh;
+    transform: rotate(8deg);
    
 }
 #particles-js-under {
     position: absolute;
-    top:0;
+    top:-5vh;
     bottom: 0;
     width: 100vw;
     height: 100vh;
+    transform: rotate(30deg);
+
  
 }
-#particles-js-img5 ,
-#particles-js-img4 ,
-#particles-js-img3 ,
-#particles-js-img2 ,
+#particles-js-img5 {
+    position: absolute;
+    top:32vh;
+    bottom: 0;
+    right: -28vh;
+    width: 54vh;
+    height: 54vh;
+    background-image: url( ./img/circle_05.png);
+    border-radius: 99em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#particles-js-img4 {
+    position: absolute;
+    top:56vh;
+    bottom: 0;
+    right: 32vw;
+    width: 20vh;
+    height: 20vh;
+    transform: rotate(-90deg);
+    background-image: url(./img/circle-ph_04.png);
+    background-repeat: no-repeat;
+    border-radius: 99em;
+    background-size: contain;
+    
+
+}
+#particles-js-img3 {
+    position: absolute;
+    top:10vh;
+    bottom: 0;
+    right: 28vw;;
+    width: 25vh;
+    height: 25vh;
+    border-radius: 99em;
+    background-repeat: no-repeat;
+    background-image: url(./img/circle-ph_03.png);
+    background-size: contain;
+
+}
+ 
+
+#particles-js-img2 {
+    position: absolute;
+    top: 36vh;
+    bottom: 0;
+    left: 33vw;
+    width: 12vh;
+    height: 12vh;
+    border-radius: 99em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(./img/circle_02.png);
+    
+    
+}
 #particles-js-img1 {
     position: absolute;
-    top:0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
+    top: 26vh;
+    left: -2vw;
+    width: 23vh;
+    height: 23vh;
+    border-radius: 99em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(./img/circle-ph_01.png);
     /* background-color: rgba(224, 223, 223, 0.8);
+    background
     background-image: url("");
     background-repeat: no-repeat;
     background-size: cover;
