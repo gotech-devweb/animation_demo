@@ -41,21 +41,21 @@ canvas {
   
 #particles-js1 {
     position: absolute;
-    top:2vh;
+    top: 0vh;
     bottom: 10vh;   
-    width: 50vw;
-    left: -6vw;
-    height: 50vh;
-    transform: rotate(24deg);
+    width: 40vw;
+    left: -10vw;
+    height: 40vh;
+    transform: rotate(16deg);
    
 }
 #particles-js2 {
     position: absolute;
-    top:18vh;
+    top:30vh;
     /* bottom: 10vh;    */
-    width: 50vw;
-    right:  -4vw;
-    height: 50vh;
+    width: 40vw;
+    right:  6vw;
+    height: 40vh;
     transform: rotate(8deg);
    
 }
@@ -86,8 +86,8 @@ canvas {
     top:56vh;
     bottom: 0;
     right: 32vw;
-    width: 20vh;
-    height: 20vh;
+    width: 18vh;
+    height: 18vh;
     transform: rotate(-90deg);
     background-image: url(./img/circle-ph_04.png);
     background-repeat: no-repeat;

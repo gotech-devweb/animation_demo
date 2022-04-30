@@ -49,11 +49,11 @@
       //  spRotate: -0.8
       // }
       //sp img 
-      let imgSp = 30
+      let imgSp = 8
       //img 5
       gsap.to("#particles-js-img5", {
-        x: "random(-300, 20, 5)", 
-        y: "random(-200, 200, 3)",
+        x: "random(-30, 30, 5)", 
+        y: "random(-30, 30, 3)",
         duration: imgSp,
         ease: "none",
         repeat: -1,
@@ -69,8 +69,8 @@
       });
 // img 4
 gsap.to("#particles-js-img4", {
-        x: "random(-300, 20, 5)", 
-        y: "random(-200, 200, 3)",
+        x: "random(-30, 30, 5)", 
+        y: "random(-30, 30, 3)",
         duration: imgSp*1.6,
         ease: "none",
         repeat: -1,
@@ -86,8 +86,8 @@ gsap.to("#particles-js-img4", {
       });
       //img 3
       gsap.to("#particles-js-img3", {
-        x: "random(-300, 20, 5)", 
-        y: "random(-200, 200, 3)",
+        x: "random(-30, 30, 5)", 
+        y: "random(-30, 30, 3)",
         duration: imgSp*1.3,
         ease: "none",
         repeat: -1,
@@ -103,8 +103,8 @@ gsap.to("#particles-js-img4", {
       });
       //img 2
       gsap.to("#particles-js-img2", {
-        x: "random(-300, 20, 5)", 
-        y: "random(-200, 200, 3)",
+        x: "random(-30, 30, 5)", 
+        y: "random(-30, 30, 3)",
         duration: imgSp*2,
         ease: "none",
         repeat: -1,
@@ -120,8 +120,8 @@ gsap.to("#particles-js-img4", {
       });
       //img 1
       gsap.to("#particles-js-img1", {
-        x: "random(-10, 200, 5)", 
-        y: "random(-200, 200, 3)",
+        x: "random(-30, 30, 5)", 
+        y: "random(-30, 30, 3)",
         duration: imgSp,
         ease: "none",
         repeat: -1,
@@ -134,16 +134,16 @@ gsap.to("#particles-js-img4", {
         ease: "none",
         repeat: -1,
       });  gsap.timeline().to("#particles-js1", {
-        x: "random(-50, 150, 5)", 
-        y: "random(-100, 100, 3)",
-        duration: 15,
+        x: "random(-10, 200, 5)", 
+        y: "random(-0, 40, 3)",
+        duration: 12,
         ease: "none",
         repeat: -1,
         repeatRefresh: true
       });  gsap.timeline().to("#particles-js2", {
-        x: "random(-150, 50, 5)", 
-        y: "random(0, 200, 3)",
-        duration: 15,
+        x: "random(-140, 10, 5)", 
+        y: "random(0, 40, 3)",
+        duration: 12,
         ease: "none",
         repeat: -1,
         repeatRefresh: true,
@@ -151,20 +151,20 @@ gsap.to("#particles-js-img4", {
       particlesJS("particles-js1", {
         particles: {
           number: {
-            value: 140,
+            value: 30,
             density: {
               enable: true,
-              value_area: 800,
+              value_area: 200,
             },
           },
           color: {
-            value: ["#000000", "#c23616", "#000000", "#000000"],
+            value: ["#000000", "#bc0b08", "#000000", "#000000"],
           },
           shape: {
             type: "circle",
             stroke: {
               width: 0,
-              color: "#5f6368",
+              color: "#bc0b08",
             },
             polygon: {
               nb_sides: 5,
@@ -176,7 +176,7 @@ gsap.to("#particles-js-img4", {
             },
           },
           opacity: {
-            value: 0.6,
+            value: 0.8,
             random: false,
             anim: {
               enable: false,
@@ -186,11 +186,11 @@ gsap.to("#particles-js-img4", {
             },
           },
           size: {
-            value: 10,
+            value: 8,
             random: true,
             anim: {
               enable: true,
-              speed: 0.2,
+              speed: 0.8,
               size_min: 1,
               sync: false,
             },
@@ -256,25 +256,25 @@ gsap.to("#particles-js-img4", {
             },
           },
         },
-        retina_detect: true,
+        retina_detect: false,
       }); 
       particlesJS("particles-js2", {
         particles: {
           number: {
-            value: 140,
+            value: 30,
             density: {
               enable: true,
-              value_area: 800,
+              value_area: 200,
             },
           },
           color: {
-            value: ["#000000", "#c23616", "#000000", "#000000"],
+            value: ["#000000", "#bc0b08", "#000000", "#000000"],
           },
           shape: {
             type: "circle",
             stroke: {
               width: 0,
-              color: "#5f6368",
+              color: "#bc0b08",
             },
             polygon: {
               nb_sides: 5,
@@ -286,7 +286,7 @@ gsap.to("#particles-js-img4", {
             },
           },
           opacity: {
-            value: 0.6,
+            value: 0.8,
             random: false,
             anim: {
               enable: false,
@@ -296,11 +296,11 @@ gsap.to("#particles-js-img4", {
             },
           },
           size: {
-            value: 10,
+            value: 8,
             random: true,
             anim: {
               enable: true,
-              speed: 0.2,
+              speed: 0.8,
               size_min: 1,
               sync: false,
             },
@@ -366,14 +366,14 @@ gsap.to("#particles-js-img4", {
             },
           },
         },
-        retina_detect: true,
+        retina_detect: false,
       });
       particlesJS("particles-js-under", {
         particles: {
           number: {
             value: 100,
             density: {
-              enable: true,
+              enable: false,
               value_area: 800,
             },
           },
