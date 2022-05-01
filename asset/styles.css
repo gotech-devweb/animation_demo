@@ -63,20 +63,32 @@ canvas {
 }
 #particles-js-under1 {
     position: absolute;
-    top:-5vh;
+    top:7vh;
     bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    transform: rotate(30deg);
+    width: 54vw;
+    height: 54vh;
+    transform: rotate(14deg);
 
  
-}#particles-js-under2 {
+}
+#particles-js-under3 {
+    position: absolute;
+    top:30vh;
+    right: 6vw;
+    bottom: 0;
+    width: 50vw;
+    height: 50vh;
+    transform: rotate(14deg);
+
+ 
+}
+#particles-js-under2 {
     position: absolute;
     top:-5vh;
     bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    transform: rotate(30deg);
+    width: 80vw;
+    height: 80vh;
+    transform: rotate(16deg);
 
  
 }
