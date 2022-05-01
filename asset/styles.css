@@ -24,12 +24,14 @@ header > .container > .container__contents{
 .container__contents {
     font-size: xxx-large;
     line-height: 8vh;
+    opacity: 1;
 }
 .contents_content:nth-child(2){
     margin-left: 3vw;
 
 
 }
+
 /* annimation background header  */
 
 canvas {
@@ -44,7 +46,7 @@ canvas {
     top: 0vh;
     bottom: 10vh;   
     width: 40vw;
-    left: -10vw;
+    left: -4vw;
     height: 40vh;
     transform: rotate(16deg);
    
@@ -59,7 +61,16 @@ canvas {
     transform: rotate(8deg);
    
 }
-#particles-js-under {
+#particles-js-under1 {
+    position: absolute;
+    top:-5vh;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: rotate(30deg);
+
+ 
+}#particles-js-under2 {
     position: absolute;
     top:-5vh;
     bottom: 0;
@@ -83,7 +94,7 @@ canvas {
 }
 #particles-js-img4 {
     position: absolute;
-    top:56vh;
+    top:60vh;
     bottom: 0;
     right: 32vw;
     width: 18vh;
@@ -113,9 +124,9 @@ canvas {
 
 #particles-js-img2 {
     position: absolute;
-    top: 36vh;
+    top: 38vh;
     bottom: 0;
-    left: 33vw;
+    left: 30vw;
     width: 12vh;
     height: 12vh;
     border-radius: 99em;
