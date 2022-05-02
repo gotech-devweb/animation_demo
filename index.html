@@ -16,18 +16,23 @@
   <body>
     <header>
       <div class="container">
+        <!-- animation 1 -->
         <canvas id="noise" class="noise"></canvas>
-        <div id="particles-js-img1"></div>
+        <!--animation 2  -->
         <div id="particles-js-under1"></div>
         <div id="particles-js-under2"></div>
         <div id="particles-js-under3"></div>
+        <!-- animation 3 , 4 -->
+        <div id="particles-js-img1"></div>
         <div id="particles-js-img2"></div>
         <div id="particles-js-img3"></div>
         <div id="particles-js-img4"></div>
         <div id="particles-js-img5"></div>
+        <!-- animation 2 -->
         <div id="particles-js1"></div>
         <div id="particles-js2"></div>
         <div class="container__contents">
+          <!-- animation 5 -->
           <div class="contents_content">Business Consulting</div>
           <div class="contents_content">System Development</div>
           <div class="contents_content">Web Advertisement</div>
@@ -35,22 +40,10 @@
       </div>
     </header>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> -->
-    <!-- <script src="https://kotanukikyoso.github.io/particles.jsWithRotateAndImageOpacity/particles.min.js"></script> -->
     <script src="./asset/particles.min.js"></script>
     <script>
-      // animation
-      // animation content
-      // let parImg = {
-      //   opacity : 0.9,
-      //  size1: 70,
-      //  size2: 100,
-      //  size3: 180,
-      //  size4: 180,
-      //  size5: 200,
-      //  spRotate: -0.8
-      // }
-      //sp img
+    // animation imgBall
+      //speed  move 
       let imgSp = 10;
       //img 5
       gsap.to("#particles-js-img5", {
@@ -132,6 +125,9 @@
         ease: "none",
         repeat: -1,
       });
+
+// move  particles
+      // left 
       gsap.timeline().to("#particles-js1", {
         x: "random(-10, 200, 5)",
         y: "random(-0, 40, 3)",
@@ -140,6 +136,7 @@
         repeat: -1,
         repeatRefresh: true,
       });
+      // right 
       gsap.timeline().to("#particles-js2", {
         x: "random(-190, 10, 5)",
         y: "random(0, 50, 3)",
@@ -148,11 +145,14 @@
         repeat: -1,
         repeatRefresh: true,
       });
-      let mobile   = window.matchMedia("(max-width : 430px)");
-      let valuePar = 24;
+  // particles......
+      let mobile = window.matchMedia("(max-width : 430px)");
       if (mobile.matches) {
         valuePar = 10;
       }
+      
+      let valuePar = 24;
+
       particlesJS("particles-js1", {
         particles: {
           number: {
@@ -483,7 +483,7 @@
         },
         retina_detect: true,
       });
-       particlesJS("particles-js-under3", {
+      particlesJS("particles-js-under3", {
         particles: {
           number: {
             value: 50,
@@ -703,602 +703,10 @@
         },
         retina_detect: true,
       });
-      // animation ball
-      // particlesJS("particles-js-img1", {
-      //   particles: {
-      //     number: {
-      //       value: 1,
-      //       density: {
-      //         enable: true,
-      //         value_area: 800,
-      //       },
-      //     },
-      //     color: {
-      //       value: ["#000000"],
-      //     },
-      //     shape: {
-      //       type: "image",
-      //       stroke: {
-      //         width: 0,
-      //         color: "##5f6368",
-      //       },
-      //       polygon: {
-      //         nb_sides: 5,
-      //       },
-      //       image: {
-      //         src: "./asset/img/circle_02.png",
-      //         width: 100,
-      //         height: 100,
-      //       },
-      //     },
-      //     opacity: {
-      //       value: parImg.opacity,
-      //       random: false,
-      //       anim: {
-      //         enable: false,
-      //         speed: 1,
-      //         opacity_min: 0.1,
-      //         sync: false,
-      //       },
-      //     },
-      //     size: {
-      //       value: parImg.size1,
-      //       random: false,
-      //       anim: {
-      //         enable: false,
-      //         speed: 1,
-      //         size_min: 0.1,
-      //         sync: false,
-      //       },
-      //     },
-      //     line_linked: {
-      //       enable: false,
-      //       distance: 150,
-      //       color: "#5f6368",
-      //       opacity: 0.2,
-      //       width: 1,
-      //     },
-      //     rotate: {
-      //       value: -45,
-      //       random: true,
-      //       anim: {
-      //         enable: true,
-      //         speed: parImg.spRotate ,
-      //       },
-      //     },
-      //     move: {
-      //       enable: true,
-      //       speed: 1.5,
-      //       direction: "none",
-      //       random: true,
-      //       straight: false,
-      //       out_mode: "bounce",
-      //       bounce: true,
-      //       attract: {
-      //         enable: false,
-      //         rotateX: 600,
-      //         rotateY: 1200,
-      //       },
-      //     },
-      //   },
-      //   interactivity: {
-      //     detect_on: "canvas",
-      //     events: {
-      //       onhover: {
-      //         enable: false,
-      //         mode: "grab",
-      //       },
-      //       onclick: {
-      //         enable: false,
-      //         mode: "push",
-      //       },
-      //       resize: true,
-      //     },
-      //     modes: {
-      //       grab: {
-      //         distance: 140,
-      //         line_linked: {
-      //           opacity: 1,
-      //         },
-      //       },
-      //       bubble: {
-      //         distance: 400,
-      //         size: 40,
-      //         duration: 2,
-      //         opacity: 8,
-      //         speed: 3,
-      //       },
-      //       repulse: {
-      //         distance: 200,
-      //         duration: 0.4,
-      //       },
-      //       push: {
-      //         particles_nb: 4,
-      //       },
-      //       remove: {
-      //         particles_nb: 2,
-      //       },
-      //     },
-      //   },
-      //   retina_detect: true,
-      // });
-      // particlesJS("particles-js-img2", {
-      //   particles: {
-      //     number: {
-      //       value: 1,
-      //       density: {
-      //         enable: true,
-      //         value_area: 800,
-      //       },
-      //     },
-      //     color: {
-      //       value: ["#000000"],
-      //     },
-      //     shape: {
-      //       type: "image",
-      //       stroke: {
-      //         width: 0,
-      //         color: "##5f6368",
-      //       },
-      //       polygon: {
-      //         nb_sides: 5,
-      //       },
-      //       image: {
-      //         src: "./asset/img/circle-ph_04.png",
-      //         width: 100,
-      //         height: 100,
-      //       },
-      //     },
-      //     opacity: {
-      //       value: parImg.opacity,
-      //       random: false,
-      //       anim: {
-      //         enable: false,
-      //         speed: 1,
-      //         opacity_min: 0.1,
-      //         sync: false,
-      //       },
-      //     },
-      //     rotate: {
-      //       value: -45,
-      //       random: true,
-      //       anim: {
-      //         enable: true,
-      //         speed: parImg.spRotate,
-      //       },
-      //     },
-      //     size: {
-      //       value: parImg.size2,
-      //       random: false,
-      //       anim: {
-      //         enable: false,
-      //         speed: 1,
-      //         size_min: 0.1,
-      //         sync: false,
-      //       },
-      //     },
-      //     line_linked: {
-      //       enable: false,
-      //       distance: 150,
-      //       color: "#5f6368",
-      //       opacity: 0.2,
-      //       width: 1,
-      //     },
-      //     move: {
-      //       enable: true,
-      //       speed: 1.5,
-      //       direction: "none",
-      //       random: true,
-      //       straight: false,
-      //       out_mode: "bounce",
-      //       bounce: true,
-      //       attract: {
-      //         enable: false,
-      //         rotateX: 600,
-      //         rotateY: 1200,
-      //       },
-      //     },
-      //   },
-      //   interactivity: {
-      //     detect_on: "canvas",
-      //     events: {
-      //       onhover: {
-      //         enable: false,
-      //         mode: "grab",
-      //       },
-      //       onclick: {
-      //         enable: false,
-      //         mode: "push",
-      //       },
-      //       resize: true,
-      //     },
-      //     modes: {
-      //       grab: {
-      //         distance: 140,
-      //         line_linked: {
-      //           opacity: 1,
-      //         },
-      //       },
-      //       bubble: {
-      //         distance: 400,
-      //         size: 40,
-      //         duration: 2,
-      //         opacity: 8,
-      //         speed: 3,
-      //       },
-      //       repulse: {
-      //         distance: 200,
-      //         duration: 0.4,
-      //       },
-      //       push: {
-      //         particles_nb: 4,
-      //       },
-      //       remove: {
-      //         particles_nb: 2,
-      //       },
-      //     },
-      //   },
-      //   retina_detect: true,
-      // });
-      // particlesJS("particles-js-img3", {
-      //   particles: {
-      //     number: {
-      //       value: 1,
-      //       density: {
-      //         enable: true,
-      //         value_area: 800,
-      //       },
-      //     },
-      //     color: {
-      //       value: ["#000000"],
-      //     },
-      //     shape: {
-      //       type: "image",
-      //       stroke: {
-      //         width: 0,
-      //         color: "##5f6368",
-      //       },
-      //       polygon: {
-      //         nb_sides: 5,
-      //       },
-      //       image: {
-      //         src: "./asset/img/circle-ph_01.png",
-      //         width: 100,
-      //         height: 100,
-      //       },
-      //     },
-      //     opacity: {
-      //       value: parImg.opacity,
-      //       random: false,
-      //       anim: {
-      //         enable: false,
-      //         speed: 1,
-      //         opacity_min: 0.1,
-      //         sync: false,
-      //       },
-      //     },
-      //     rotate: {
-      //       value: -45,
-      //       random: true,
-      //       anim: {
-      //         enable: true,
-      //         speed: parImg.spRotate,
-      //       },
-      //     },
-      //     size: {
-      //       value: parImg.size3,
-      //       random: false,
-      //       anim: {
-      //         enable: false,
-      //         speed: 1,
-      //         size_min: 0.1,
-      //         sync: false,
-      //       },
-      //     },
-      //     line_linked: {
-      //       enable: false,
-      //       distance: 150,
-      //       color: "#5f6368",
-      //       opacity: 0.1,
-      //       width: 1,
-      //     },
-      //     move: {
-      //       enable: true,
-      //       speed: 1.5,
-      //       direction: "none",
-      //       random: true,
-      //       straight: false,
-      //       out_mode: "bounce",
-      //       bounce: true,
-      //       attract: {
-      //         enable: false,
-      //         rotateX: 600,
-      //         rotateY: 1200,
-      //       },
-      //     },
-      //   },
-      //   interactivity: {
-      //     detect_on: "canvas",
-      //     events: {
-      //       onhover: {
-      //         enable: false,
-      //         mode: "grab",
-      //       },
-      //       onclick: {
-      //         enable: false,
-      //         mode: "push",
-      //       },
-      //       resize: true,
-      //     },
-      //     modes: {
-      //       grab: {
-      //         distance: 140,
-      //         line_linked: {
-      //           opacity: 1,
-      //         },
-      //       },
-      //       bubble: {
-      //         distance: 400,
-      //         size: 40,
-      //         duration: 2,
-      //         opacity: 8,
-      //         speed: 3,
-      //       },
-      //       repulse: {
-      //         distance: 200,
-      //         duration: 0.4,
-      //       },
-      //       push: {
-      //         particles_nb: 4,
-      //       },
-      //       remove: {
-      //         particles_nb: 2,
-      //       },
-      //     },
-      //   },
-      //   retina_detect: true,
-      // });
-      // particlesJS("particles-js-img4", {
-      //   particles: {
-      //     number: {
-      //       value: 1,
-      //       density: {
-      //         enable: true,
-      //         value_area: 800,
-      //       },
-      //     },
-      //     color: {
-      //       value: ["#000000"],
-      //     },
-      //     shape: {
-      //       type: "image",
-      //       stroke: {
-      //         width: 0,
-      //         color: "##5f6368",
-      //       },
-      //       polygon: {
-      //         nb_sides: 5,
-      //       },
-      //       image: {
-      //         src: "./asset/img/circle-ph_03.png",
-      //         width: 100,
-      //         height: 100,
-      //       },
-      //     },
-      //     opacity: {
-      //       value: parImg.opacity,
-      //       random: false,
-      //       anim: {
-      //         enable: false,
-      //         speed: 1,
-      //         opacity_min: 0.1,
-      //         sync: false,
-      //       },
-      //     },
-      //     rotate: {
-      //       value: -45,
-      //       random: true,
-      //       anim: {
-      //         enable: true,
-      //         speed: parImg.spRotate,
-      //       },
-      //     },
-      //     size: {
-      //       value: parImg.size4,
-      //       random: false,
-      //       anim: {
-      //         enable: false,
-      //         speed: 1,
-      //         size_min: 0.1,
-      //         sync: false,
-      //       },
-      //     },
-      //     line_linked: {
-      //       enable: false,
-      //       distance: 150,
-      //       color: "#5f6368",
-      //       opacity: 0.1,
-      //       width: 1,
-      //     },
-      //     move: {
-      //       enable: true,
-      //       speed: 1.5,
-      //       direction: "none",
-      //       random: true,
-      //       straight: false,
-      //       out_mode: "bounce",
-      //       bounce: true,
-      //       attract: {
-      //         enable: false,
-      //         rotateX: 600,
-      //         rotateY: 1200,
-      //       },
-      //     },
-      //   },
-      //   interactivity: {
-      //     detect_on: "canvas",
-      //     events: {
-      //       onhover: {
-      //         enable: false,
-      //         mode: "grab",
-      //       },
-      //       onclick: {
-      //         enable: false,
-      //         mode: "push",
-      //       },
-      //       resize: true,
-      //     },
-      //     modes: {
-      //       grab: {
-      //         distance: 140,
-      //         line_linked: {
-      //           opacity: 1,
-      //         },
-      //       },
-      //       bubble: {
-      //         distance: 400,
-      //         size: 40,
-      //         duration: 2,
-      //         opacity: 8,
-      //         speed: 3,
-      //       },
-      //       repulse: {
-      //         distance: 200,
-      //         duration: 0.4,
-      //       },
-      //       push: {
-      //         particles_nb: 4,
-      //       },
-      //       remove: {
-      //         particles_nb: 2,
-      //       },
-      //     },
-      //   },
-      //   retina_detect: true,
-      // });
-      // particlesJS("particles-js-img5", {
-      //   particles: {
-      //     number: {
-      //       value: 1,
-      //       density: {
-      //         enable: false,
-      //         value_area: 800,
-      //       },
-      //     },
-      //     color: {
-      //       value: ["#000000"],
-      //     },
-      //     shape: {
-      //       type: "image",
-      //       stroke: {
-      //         width: 0,
-      //         color: "##5f6368",
-      //       },
-      //       polygon: {
-      //         nb_sides: 5,
-      //       },
-      //       image: {
-      //         src: "./asset/img/circle_05.png",
-      //         width: 100,
-      //         height: 100,
-      //       },
-      //     },
-      //     opacity: {
-      //       value: parImg.opacity,
-      //       random: false,
-      //       anim: {
-      //         enable: false,
-      //         speed: 1,
-      //         opacity_min: 0.1,
-      //         sync: false,
-      //       },
-      //     },
-      //     rotate: {
-      //       value: -45,
-      //       random: true,
-      //       anim: {
-      //         enable: true,
-      //         speed: parImg.spRotate,
-      //       },
-      //     },
-      //     size: {
-      //       value: parImg.size5,
-      //       random: false,
-      //       anim: {
-      //         enable: false,
-      //         speed: 1,
-      //         size_min: 0.1,
-      //         sync: false,
-      //       },
-      //     },
-      //     line_linked: {
-      //       enable: false,
-      //       distance: 150,
-      //       color: "#5f6368",
-      //       opacity: 0.1,
-      //       width: 1,
-      //     },
-      //     move: {
-      //       enable: true,
-      //       speed: 1.5,
-      //       direction: "none",
-      //       random: false,
-      //       straight: false,
-      //       out_mode: "bounce",
-      //       bounce: false,
-      //       attract: {
-      //         enable: true,
-      //         rotateX: 600,
-      //         rotateY: 1200,
-      //       },
-      //     },
-      //   },
-      //   interactivity: {
-      //     detect_on: "canvas",
-      //     events: {
-      //       onhover: {
-      //         enable: false,
-      //         mode: "grab",
-      //       },
-      //       onclick: {
-      //         enable: false,
-      //         mode: "push",
-      //       },
-      //       resize: true,
-      //     },
-      //     modes: {
-      //       grab: {
-      //         distance: 140,
-      //         line_linked: {
-      //           opacity: 1,
-      //         },
-      //       },
-      //       bubble: {
-      //         distance: 400,
-      //         size: 40,
-      //         duration: 2,
-      //         opacity: 8,
-      //         speed: 3,
-      //       },
-      //       repulse: {
-      //         distance: 200,
-      //         duration: 0.4,
-      //       },
-      //       push: {
-      //         particles_nb: 4,
-      //       },
-      //       remove: {
-      //         particles_nb: 2,
-      //       },
-      //     },
-      //   },
-      //   retina_detect: true,
-      // });
-
-      // let imgCVs = document.querySelectorAll('div > canvas')
-      // imgCVs[3].rotate(20 * Math.PI / 180);
+   // Text animationBlur
       let textCs = document.getElementsByClassName("contents_content");
       let tl = gsap.timeline({ delay: 0.1 });
+    // first text 
       tl.from(textCs[0], {
         duration: 0.1,
         opacity: 0,
@@ -1309,7 +717,8 @@
         filter: "blur(8px)",
         ease: "power1.in",
       });
-
+      // ----------
+    // rest text 
       tl.from(textCs[1], {
         duration: 0.1,
         opacity: 0,
@@ -1320,6 +729,7 @@
         filter: "blur(8px)",
         ease: "power1.in",
       });
+      // -----------
       tl.from(textCs[2], {
         duration: 0.1,
         opacity: 0,
@@ -1331,7 +741,7 @@
         ease: "power1.in",
       });
 
-      // background noise
+    // background noise
       const noise = () => {
         let canvas, ctx;
         let wWidth, wHeight;
@@ -1339,7 +749,6 @@
         let frame = 0;
         let loopTimeout;
 
-        // Create Noise
         const createNoise = () => {
           const idata = ctx.createImageData(wWidth, wHeight);
           const buffer32 = new Uint32Array(idata.data.buffer);
@@ -1352,7 +761,6 @@
           noiseData.push(idata);
         };
 
-        // Play Noise
         const paintNoise = () => {
           if (frame === 9) {
             frame = 0;
@@ -1362,7 +770,6 @@
           ctx.putImageData(noiseData[frame], 0, 0);
         };
 
-        // Loop
         const loop = () => {
           paintNoise(frame);
           loopTimeout = window.setTimeout(() => {
@@ -1370,7 +777,6 @@
           }, 1000 / 25);
         };
 
-        // Setup
         const setup = () => {
           wWidth = window.innerWidth;
           wHeight = window.innerHeight;
@@ -1382,7 +788,6 @@
           loop();
         };
 
-        // Reset
         let resizeThrottle;
         const reset = () => {
           window.addEventListener(
@@ -1398,7 +803,6 @@
           );
         };
 
-        // Init
         const init = (() => {
           canvas = document.getElementById("noise");
           ctx = canvas.getContext("2d");

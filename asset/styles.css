@@ -32,14 +32,13 @@ header > .container > .container__contents{
 
 }
 
-/* annimation background header  */
 
 canvas {
     display: block;
     vertical-align: bottom;
 }
   
-    /* ---- particles.js container ---- */
+ /* ---- particles ---- */
   
 #particles-js1 {
     position: absolute;
@@ -54,7 +53,6 @@ canvas {
 #particles-js2 {
     position: absolute;
     top:30vh;
-    /* bottom: 10vh;    */
     width: 40vw;
     right:  6vw;
     height: 40vh;
@@ -71,6 +69,16 @@ canvas {
 
  
 }
+#particles-js-under2 {
+    position: absolute;
+    top:-5vh;
+    bottom: 0;
+    width: 80vw;
+    height: 80vh;
+    transform: rotate(16deg);
+
+ 
+}
 #particles-js-under3 {
     position: absolute;
     top:30vh;
@@ -82,16 +90,7 @@ canvas {
 
  
 }
-#particles-js-under2 {
-    position: absolute;
-    top:-5vh;
-    bottom: 0;
-    width: 80vw;
-    height: 80vh;
-    transform: rotate(16deg);
 
- 
-}
 #particles-js-img5 {
     position: absolute;
     top:32vh;
@@ -158,16 +157,9 @@ canvas {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(./img/circle-ph_01.png);
-    /* background-color: rgba(224, 223, 223, 0.8);
-    background
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%; */
 }
-    /* background noise  */
+/* background noise  */
     .noise {
-        /* z-index: 1; */
         position: absolute;
         top: 0;
         left: 0;
