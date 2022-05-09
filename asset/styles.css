@@ -19,15 +19,27 @@ header{
 header > .container > .container__contents{
     position: absolute;
     bottom: 10vh;
-    left: 8vh;
+    left: 8vw;
 }
 .container__contents {
-    font-size: xx-large;
+    font-size: xxx-large;
     line-height: 8vh;
     opacity: 1;
 }
+@media only screen and (max-width : 600px ) {
+    header > .container > .container__contents{
+        
+        left: 1vw;
+    }
+}
 .contents_content:nth-child(2){
     margin-left: 3vw;
+
+
+}
+.contents_content:last-child{
+    margin-left: 3vw;
+    font-size: small;
 
 
 }
@@ -45,7 +57,7 @@ canvas {
     top: 0vh;
     bottom: 10vh;   
     width: 40vw;
-    left: -4vw;
+    left: -12vw;
     height: 40vh;
     transform: rotate(16deg);
    
@@ -63,8 +75,8 @@ canvas {
     position: absolute;
     top:7vh;
     bottom: 0;
-    width: 54vw;
-    height: 54vh;
+    width: 40vw;
+    height: 40vh;
     transform: rotate(14deg);
 
  
@@ -82,10 +94,10 @@ canvas {
 #particles-js-under3 {
     position: absolute;
     top:30vh;
-    right: 6vw;
+    right: 10vw;
     bottom: 0;
-    width: 50vw;
-    height: 50vh;
+    width: 40vw;
+    height: 40vh;
     transform: rotate(14deg);
 
  
