@@ -129,8 +129,8 @@
       // move  particles
       // left
       gsap.timeline().to("#particles-js1", {
-        x: "random(-10, 200, 5)",
-        y: "random(-0, 40, 3)",
+        x: "random(-10, 40, 5)",
+        y: "random(-0, 20, 3)",
         duration: 8,
         ease: "none",
         repeat: -1,
@@ -138,40 +138,50 @@
       });
       // right
       gsap.timeline().to("#particles-js2", {
-        x: "random(-190, 10, 5)",
-        y: "random(0, 50, 3)",
+        x: "random(-40, 10, 5)",
+        y: "random(0, 20, 3)",
         duration: 8,
         ease: "none",
         repeat: -1,
         repeatRefresh: true,
       });
       // particles......
-      let mobile = window.matchMedia("(max-width : 430px)");
-      let valuePar = 24;
-      if (mobile.matches) {
+      let sm = window.matchMedia("(max-width : 870px)");
+      let  md = window.matchMedia("(max-width : 1100px)");
+      let  lg = window.matchMedia("(max-width : 1300px)");
+      let valuePar = 28 ;
+      if (sm.matches) {
         valuePar = 10;
+      } else if(md.matches) {
+        valuePar = 20
+      }else if(lg.matches) {
+        valuePar = 24
       }
       window.onresize = () => {
-        if (mobile.matches) {
-          valuePar = 10;
-        } else {
-           valuePar = 24;
-        }
+        if (sm.matches) {
+        valuePar = 10;
         particlesAnimation();
+      } else if(md.matches) {
+        valuePar = 20
+        particlesAnimation();
+      }else if(lg.matches) {
+        valuePar = 28
+        particlesAnimation();
+      }
       };
       particlesAnimation();
       function particlesAnimation() {
         particlesJS("particles-js1", {
           particles: {
             number: {
-              value: valuePar,
+              value: valuePar - 4,
               density: {
-                enable: false,
+                enable: true,
                 value_area: 180,
               },
             },
             color: {
-              value: ["#000000", "#bc0b08", "#000000", "#000000"],
+              value: ["#000000", "#bc0b08", "#000000"],
             },
             shape: {
               type: "circle",
@@ -210,19 +220,19 @@
             },
             line_linked: {
               enable: true,
-              distance: 150,
+              distance: 200,
               color: "#5f6368",
-              opacity: 0.7,
+              opacity: 0.4,
               width: 1,
             },
             move: {
               enable: true,
               speed: 1.5,
               direction: "none",
-              random: true,
+              random: false,
               straight: false,
               out_mode: "bounce",
-              bounce: false,
+              bounce: true,
               attract: {
                 enable: false,
                 rotateX: 600,
@@ -276,7 +286,7 @@
             number: {
               value: valuePar,
               density: {
-                enable: false,
+                enable: true,
                 value_area: 180,
               },
             },
@@ -320,16 +330,16 @@
             },
             line_linked: {
               enable: true,
-              distance: 150,
+              distance: 200,
               color: "#5f6368",
-              opacity: 0.7,
+              opacity: 0.4,
               width: 1,
             },
             move: {
               enable: true,
               speed: 1.5,
               direction: "none",
-              random: true,
+              random: false,
               straight: false,
               out_mode: "bounce",
               bounce: false,
@@ -385,7 +395,7 @@
         particlesJS("particles-js-under1", {
           particles: {
             number: {
-              value: 50,
+              value: 30,
               density: {
                 enable: false,
                 value_area: 800,
@@ -430,7 +440,7 @@
               },
             },
             line_linked: {
-              enable: false,
+              enable: true,
               distance: 150,
               color: "#5f6368",
               opacity: 0.2,
@@ -495,7 +505,7 @@
         particlesJS("particles-js-under3", {
           particles: {
             number: {
-              value: 50,
+              value: 30,
               density: {
                 enable: false,
                 value_area: 800,
@@ -540,7 +550,7 @@
               },
             },
             line_linked: {
-              enable: false,
+              enable: true,
               distance: 150,
               color: "#5f6368",
               opacity: 0.2,
