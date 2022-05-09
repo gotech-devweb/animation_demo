@@ -1,123 +1,122 @@
-*{
+* {
     font-family: 'EB Garamond', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
 /* header  */
-header >  .container{
+
+header>.container {
     width: 100vw;
     height: 100vh;
     background-color: #cccc;
     position: relative;
-   
 }
-header{
+
+header {
     overflow: hidden;
 }
 
-header > .container > .container__contents{
+header>.container>.container__contents {
     position: absolute;
     bottom: 10vh;
     left: 8vw;
 }
+
 .container__contents {
     font-size: xxx-large;
     line-height: 8vh;
     opacity: 1;
 }
-@media only screen and (max-width : 600px ) {
-    header > .container > .container__contents{
-        
+
+@media only screen and (max-width: 600px) {
+    header>.container>.container__contents {
         left: 1vw;
     }
 }
-.contents_content:nth-child(2){
+
+.contents_content:nth-child(2) {
     margin-left: 3vw;
-
-
 }
-.contents_content:last-child{
+
+.contents_content:last-child {
     margin-left: 3vw;
     font-size: small;
-
-
 }
-
 
 canvas {
     display: block;
     vertical-align: bottom;
 }
-  
- /* ---- particles ---- */
-  
+
+
+/* ---- particles ---- */
+
 #particles-js1 {
     position: absolute;
     top: 0vh;
-    bottom: 10vh;   
+    bottom: 10vh;
     width: 40vw;
     left: -12vw;
     height: 40vh;
     transform: rotate(16deg);
-   
 }
+
 #particles-js2 {
     position: absolute;
-    top:30vh;
+    top: 30vh;
     width: 40vw;
-    right:  6vw;
+    right: 6vw;
     height: 40vh;
     transform: rotate(8deg);
-   
 }
+
 #particles-js-under1 {
     position: absolute;
-    top:7vh;
+    top: 7vh;
     bottom: 0;
     width: 40vw;
     height: 40vh;
     transform: rotate(14deg);
-
- 
 }
+
 #particles-js-under2 {
     position: absolute;
-    top:-5vh;
+    top: -5vh;
     bottom: 0;
     width: 80vw;
     height: 80vh;
     transform: rotate(16deg);
-
- 
 }
+
 #particles-js-under3 {
     position: absolute;
-    top:30vh;
+    top: 30vh;
     right: 10vw;
     bottom: 0;
     width: 40vw;
     height: 40vh;
     transform: rotate(14deg);
-
- 
 }
 
 #particles-js-img5 {
     position: absolute;
-    top:32vh;
+    top: 32vh;
     bottom: 0;
     right: -28vh;
     width: 54vh;
     height: 54vh;
-    background-image: url( ./img/circle_05.png);
+    background-image: url(./img/circle_05.png);
     border-radius: 99em;
     background-repeat: no-repeat;
     background-size: contain;
 }
+
 #particles-js-img4 {
     position: absolute;
-    top:60vh;
+    top: 60vh;
     bottom: 0;
     right: 32vw;
     width: 18vh;
@@ -127,23 +126,21 @@ canvas {
     background-repeat: no-repeat;
     border-radius: 99em;
     background-size: contain;
-    
-
 }
+
 #particles-js-img3 {
     position: absolute;
-    top:10vh;
+    top: 10vh;
     bottom: 0;
-    right: 28vw;;
+    right: 28vw;
+    ;
     width: 25vh;
     height: 25vh;
     border-radius: 99em;
     background-repeat: no-repeat;
     background-image: url(./img/circle-ph_03.png);
     background-size: contain;
-
 }
- 
 
 #particles-js-img2 {
     position: absolute;
@@ -156,9 +153,8 @@ canvas {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(./img/circle_02.png);
-    
-    
 }
+
 #particles-js-img1 {
     position: absolute;
     top: 26vh;
@@ -170,14 +166,16 @@ canvas {
     background-size: contain;
     background-image: url(./img/circle-ph_01.png);
 }
+
+
 /* background noise  */
-    .noise {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        opacity: 0.05;
-      }
-      
+
+.noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.05;
+}
