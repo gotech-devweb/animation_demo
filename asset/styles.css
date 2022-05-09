@@ -37,6 +37,12 @@ header > .container > .container__contents{
 
 
 }
+.contents_content:last-child{
+    margin-left: 3vw;
+    font-size: small;
+
+
+}
 
 
 canvas {

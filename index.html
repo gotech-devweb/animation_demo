@@ -36,6 +36,7 @@
           <div class="contents_content">Business Consulting</div>
           <div class="contents_content">System Development</div>
           <div class="contents_content">Web Advertisement</div>
+          <div class="contents_content"> 様々な事業のサポートを行い目に見える結果をお客さまへ</div>
         </div>
       </div>
     </header>
@@ -755,6 +756,16 @@
         opacity: 0,
       });
       tl.from(textCs[2], {
+        duration: 1.4,
+        WebkitFilter: "blur(8px)",
+        filter: "blur(8px)",
+        ease: "power1.in",
+      });
+       tl.from(textCs[3], {
+        duration: 0.1,
+        opacity: 0,
+      });
+      tl.from(textCs[3], {
         duration: 1.4,
         WebkitFilter: "blur(8px)",
         filter: "blur(8px)",
