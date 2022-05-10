@@ -166,32 +166,53 @@ canvas {
     background-size: contain;
     background-image: url(./img/circle-ph_01.png);
 }
-@media only screen and (max-width: 600px) {
 
+@media only screen and (max-width: 600px) {
     #particles-js-img5 {
-        width: 40vh ;
+        width: 40vh;
         height: 40vh;
     }
-     #particles-js-img4 {
-        width: 12vh ;
+    #particles-js-img4 {
+        width: 12vh;
         height: 12vh;
     }
-     #particles-js-img3 {
-        width: 18vh ;
+    #particles-js-img3 {
+        width: 18vh;
         height: 18vh;
     }
-     #particles-js-img2 {
-        width: 8vh ;
+    #particles-js-img2 {
+        width: 8vh;
         height: 8vh;
     }
-  #particles-js-img1 {
-        width: 14vh ;
+    #particles-js-img1 {
+        width: 14vh;
         height: 14vh;
     }
-
-
-
 }
+
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+    #particles-js-img5 {
+        width: 40vh;
+        height: 40vh;
+    }
+    #particles-js-img4 {
+        width: 12vh;
+        height: 12vh;
+    }
+    #particles-js-img3 {
+        width: 18vh;
+        height: 18vh;
+    }
+    #particles-js-img2 {
+        width: 8vh;
+        height: 8vh;
+    }
+    #particles-js-img1 {
+        width: 14vh;
+        height: 14vh;
+    }
+}
+
 
 /* background noise  */
 
